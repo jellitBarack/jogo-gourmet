@@ -10,6 +10,6 @@ public interface Controle {
 	
 	String nomePrato();
 	
-	void adicionaNo(String respostaPositiva, String respostaNegativa);
+	void adicionaNivel(String respostaPositiva, String respostaNegativa);
 	
 }

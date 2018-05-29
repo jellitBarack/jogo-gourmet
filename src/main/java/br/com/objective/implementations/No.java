@@ -26,7 +26,7 @@ public class No implements Controle {
 	}
 	
 	public void defineOpcoesIniciais(String opcaoPositiva, String opcaoNegativa) {
-		this.adicionaNo(opcaoPositiva, opcaoNegativa);
+		this.adicionaNivel(opcaoPositiva, opcaoNegativa);
 	}
 
 	public void pergunta() {
@@ -56,7 +56,7 @@ public class No implements Controle {
 	}
 
 	@Override
-	public void adicionaNo(String respostaPositiva, String respostaNegativa) {
+	public void adicionaNivel(String respostaPositiva, String respostaNegativa) {
 		this.noPositivo = new No(respostaPositiva);
 		this.noNegativo = new No(respostaNegativa);
 	}

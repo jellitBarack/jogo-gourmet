@@ -29,7 +29,7 @@ public class NoFinal implements Controle {
         String caracteristica = JOptionPane.showInputDialog(
         	String.format(TEXTO_COMPARACAO_PRATOS, prato, controle.nomePrato())
         );
-        controle.adicionaNo(prato, caracteristica);
+        controle.adicionaNivel(prato, caracteristica);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class NoFinal implements Controle {
 	}
 
 	@Override
-	public void adicionaNo(String respostaPositiva, String respostaNegativa) {
+	public void adicionaNivel(String respostaPositiva, String respostaNegativa) {
 		throw new UnsupportedOperationException(TEXTO_NOT_YET_IMPLEMENTED);
 	}
 	
