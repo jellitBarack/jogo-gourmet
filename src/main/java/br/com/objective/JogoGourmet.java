@@ -14,13 +14,15 @@ public class JogoGourmet {
 	private static final String TEXTO_PENSE_EM_UM_PRATO = "Pense em um prato que gosta.";
 	
 	public static void main(String[] args) {
-		No no = new No("massa");
-		no.adicionaNivel("Lazanha", "Bolo de Chocolate");
+		JogoGourmet jogo = new JogoGourmet();
 		
-		criaTela(no);		
+		No no = new No("massa");
+		no.defineOpcoesIniciais("Lazanha", "Bolo de Chocolate");
+		
+		jogo.start(no);		
 	}
 	
-	private static void criaTela(No no) {
+	private void start(No no) {
 		JFrame jframe = new JFrame("Jogo Gourmet");
 		JLabel jlabel = new JLabel(TEXTO_PENSE_EM_UM_PRATO);
 		JButton jbuttonOk = new JButton("OK");
