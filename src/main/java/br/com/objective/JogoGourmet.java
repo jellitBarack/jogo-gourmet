@@ -15,14 +15,13 @@ public class JogoGourmet {
 	
 	public static void main(String[] args) {
 		JogoGourmet jogo = new JogoGourmet();
-		
-		No no = new No("massa");
-		no.defineOpcoesIniciais("Lazanha", "Bolo de Chocolate");
-		
-		jogo.start(no);		
+		jogo.start();		
 	}
 	
-	private void start(No no) {
+	private void start() {
+		final No no = new No("massa");
+		no.defineOpcoesIniciais("Lazanha", "Bolo de Chocolate");
+		
 		JFrame jframe = new JFrame("Jogo Gourmet");
 		JLabel jlabel = new JLabel(TEXTO_PENSE_EM_UM_PRATO);
 		JButton jbuttonOk = new JButton("OK");
@@ -40,7 +39,6 @@ public class JogoGourmet {
 		jframe.add(jbuttonOk);
 		
 		jbuttonOk.addActionListener(new ActionListener() {
-			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				no.pergunta();
